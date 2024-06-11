@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>button</title>
+    </head>
+    <body>
+        <button onclick="doSomething()" style="font-size: 25px; background-color: gray;color: red; border-radius: 25px;">click me</button>
+
+        <p id="greeting">Hello</p>
+        
+        <!--javascript-->
+        <script>
+            function doSomething() {
+                document.getElementById("greeting").innerHTML = "Goodbye"
+            }
+        </script> 
+    </body>
+</html>

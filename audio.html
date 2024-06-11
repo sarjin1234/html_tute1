@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My web on audio</title>
+    </head>
+
+    <body>
+        <p>Espel</p>
+        <audio controls> <!--不加controls啥都显示不出来。可以在句末加autoplay自动播放-->
+            <source src="myAudios/Espel.mp3">
+        </audio>
+
+        <audio controls autoplay muted loop> <!--自动播放并静音-->
+            <source src="myAudios/Espel.mp3" type="audio/mpeg">
+            <source src="myAudio/Espel.wav" type="audio/wav"> <!--以防browser与mp3不兼容，可以加fall backs-->
+        </audio>
+
+        <p>Luz</p>
+        <audio controls>
+            <source src="myAudios/Luz.mp3">
+        </audio>
+
+        <p>Mas</p>
+        <audio controls>
+            <source src="myAudios/Mas.mp3">
+        </audio>
+    </body>
+</html>

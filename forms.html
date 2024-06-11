@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+
+        <!--the action attribute sends data to a assigned location-->
+        <!--the method attribute specifies if this is a GET or POST request. 
+            POST is used for confidential info such as username & password
+            GET is for insensitive data-->
+        <!--enctype="multipart/form-data": 用来传输大文件(比如图片)。把文件拆成几小部分送过去，
+                                           送到后再合并起来-->
+        <form action="index.php" method="post" enctype="multipart/form-data">
+
+            <label for="username">username:</label>
+            <!--required: 如果在没填东西时submit,则会弹出提示"Please fill out this field"-->
+            <input type="text" id="username" placeholder="yourname" minlength="6" maxlength="10" required>
+
+            <br>
+
+            <label for="password">password:</label>
+            <!--type="password":用户输入的内容不可见（用黑圆点代替）-->
+            <input type="password" id="password" placeholder="123456" required> 
+
+            <br>
+
+            <label for="email">email:</label>
+            <!--type="email":必须在中间有@，没有则报错-->
+            <input type="email" id="email" placeholder="yourname@gmail.com">
+
+            <br>
+
+            <label for="phone">phone #:</label>
+            <!--pattern:必须按照指定格式提交，某则报错。[0-9]{3}-[0-9]{3}: 3个数字后跟-，再跟3个数字--->
+            <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+            <br>
+
+            <label for="bday">birthday:</label>
+            <input type="date" id="bday"> <!--type="date":出现一个calendar让用户选日期-->
+
+            <br>
+
+            <label for="quantity">quantity:</label>
+            <!--type="quantity":只能填数字-->
+            <input type="number" id="quantity" min="0" max="99" value="1"> <!--value=默认值--> 
+
+            <br>
+
+            <label for="title">title:</label>
+
+            <label for="Mr.">Mr.</label>
+            <!--type="radio":一个可被选择的小圆点，一组(这里是name="title"的radio input)里只可选一个-->
+            <input type="radio" id="Mr." value="Mr." name="title"> 
+            <label for="Ms.">Ms.</label>
+            <input type="radio" id="Ms." value="Ms." name="title">
+            <label for="PhD.">PhD.</label>
+            <input type="radio" id="PhD." value="PhD." name="title">
+
+            <br>
+
+            <label for="payment">payment</label>
+            <select id="payment"> <!--select element: 小长方形里一个向下的箭头，点开会出现设好的选项:-->
+                <option value="visa">visa</option>
+                <option value="mastercard">mastercard</option>
+                <option value="giftcard">giftcard</option>
+            </select>
+
+            <br>
+
+            <label for="subscribe">subscribe:</label>
+            <!--type="checkbox": 一个可被打勾的小方格，点击subscribe或小方格都可让其被选中-->
+            <input type="checkbox" id="subscribe"> 
+
+            <br>
+
+            <label for="comment">comment:</label>
+            <textarea id="comment" rows="3" cols="25"></textarea> <!--一个大长方形，里面供你打字-->
+
+            <br>
+
+            <label for="file">file:</label>
+            <!--type=file: 写有“选择文件”的按钮，点击会打开文件夹-->
+            <input type="file" id="file" accept="image/png, image/jpeg"> <!--accept:规定选择文件的类型-->
+
+            <br>
+
+            <input type="reset">
+            <input type="submit">
+
+        </form>
+
+    </body>
+</html>
